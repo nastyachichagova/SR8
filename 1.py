@@ -17,25 +17,18 @@ if (n<0):
 else:
     n1=n
 
-def two (x):
+def res (x, s):
     b = ''
     while x > 0:
-        b = str(x % 2) + b
-        x = x // 2
-    return b
-
-def eight (y):
-    b = ''
-    while y > 0:
-        b = str(y % 8) + b
-        y = y // 8
+        b = str(x % s) + b
+        x = x // s
     return b
 
 if (n>0):
     if (sis == 2):
-        print (two(n1))
+        print (res(n1, 2))
     elif (sis == 8):
-        print (eight(n1))
+        print (res(n1, 8))
     else:
         print ('Входные данные не удовлетворяют условию!')
 elif (n==0):
@@ -45,8 +38,8 @@ elif (n==0):
         print ('Входные данные не удовлетворяют условию!')
 elif (n<0):
     if (sis == 2):
-        print ('-' + two(n1))
+        print ('-' + res(n1, 2))
     elif (sis == 8):
-        print ('-' + eight(n1))
+        print ('-' + res(n1, 8))
     else:
         print ('Входные данные не удовлетворяют условию!')
